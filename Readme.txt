@@ -7,6 +7,8 @@ Example
 2. The file requires username, password and the path of the video file to upload
 3. The script returns the shared url of the video
 
+>ScrapperMin.exe OpenLoad.txt -file=args.txt
+
 If you notice, we have a args.txt file which is the arguments required by OpenLoad.txt, inside this file is :
 [param]
 email@email.com
@@ -14,6 +16,9 @@ email@email.com
 password
 [param]
 C:\example\test.mp4
+
+the syntax is actually equal with
+>ScrapperMin.exe OpenLoad.txt email@email.com password "c:\example\test.mp4"
 
 ScrapperMin is a useful software that you can write script for it to interact with any websites in the world even the website does not have API. It uses plain HTTP protocol with URL/Multipart encoded to upload text, files, download files, login, logout, posting, etc.
 
