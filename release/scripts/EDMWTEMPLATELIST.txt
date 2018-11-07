@@ -1,0 +1,41 @@
+WC_ClearCookies();
+SET('URL', '{PARAM0}');
+SET('PG', WC_MethodPage(GET('URL'), 'GET', '', ''));
+SET('PG2', SO_TagMatch(GET('PG'), '<!-- show threads -->', '<!-- end show threads -->'));
+SET('TEMPLATES', SO_TagMatch(GET('PG2'), '<tr', '</tr>'));
+SET('RESULT', '');
+FOR('T', GET('TEMPLATES'),
+   SET('ID', SO_TagMatch(GET('T'), 'td_threadstatusicon_', '"'));
+   IF(GET('T'), 'CONTAINS', 'thread_moved.gif', CONTINUE(), PASS());
+   SET('Title', SO_TagMatch(GET('T'), JOIN('', 'id="thread_title_', GET('ID'), '">'), '<'));
+   SET('ALLLINKS', SO_TagMatch(GET('T'), '<a href="', '"'));
+   SET('URL', FILTER('0', GET('ALLLINKS')));
+   IF(GET('T'), 'CONTAINS', 'onclick="attachments(', SET('URL', FILTER('1', GET('ALLLINKS'))), PASS());
+   SET('CreatedUserID', SO_TagMatch(GET('T'), 'window.open(''/users/', '/'));
+   SET('CreatedUserName', SO_TagMatch(GET('T'), '_self'')">', '<'));
+   SET('CreatedDate', '');
+   SET('LastPostUserID', SO_TagMatch(GET('T'), '<a href="/users/', '/'));
+   SET('LastPostUserName', SO_TagMatch(GET('T'), JOIN('', '<a href="/users/', GET('LastPostUserID') , '/" >'), '<'));
+   SET('LastPostDatex', SO_TagMatchFromBehind(GET('T'), 'nowrap">', JOIN('', 'by <a href="/users/', GET('LastPostUserID') , '/" >')));
+   IF(GET('LastPostDatex'), '!=', '',
+      SET('LastPostDate', TRIM(SO_StripHTML(GET('LastPostDatex'))));
+   , SET('LastPostDate', ''));
+   SET('PageCount', SO_TagMatch(GET('T'), JOIN('', '<a href="/users/', GET('LastPostUserID') , '/" >'), '<'));
+   SET('LastPage', '1');
+   IF(GET('T'), 'CONTAINS', JOIN('', '-', GET('ID'), '-'),
+      SET('Pages', SO_TagMatch(GET('T'), JOIN('', '-', GET('ID'), '-'), '.'));
+      FOR('P', GET('Pages'),
+         IF(GET('P'), '>', GET('Lastpage'),
+            SET('LastPage', GET('P'));
+         , PASS());
+      );
+   , PASS();
+   );
+   SET('LINE', JOIN('|==COLUMN9182091==|', GET('ID'), GET('URL'), GET('Title'), GET('CreatedUserID'), GET('CreatedUserName'), GET('CreatedDate'), GET('LastPostUserID'), GET('LastPostUserName'), GET('LastPostDate'), GET('LastPage')));
+   IF(GET('RESULT'), '=', '',
+      SET('RESULT', GET('LINE'));
+   ,
+      SET('RESULT', GET('RESULT');GET('LINE'));
+   );
+);
+LOG(GET('RESULT'));
