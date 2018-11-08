@@ -15,4 +15,4 @@ $ ./ScrapperMinLinux64 DownloadFile.txt
 
 Note : in Linux/Mac both the executable and the scripts name is case sensitive
 
-And you will get a mp3 file which the ScrapperMin downloads for you instructed by downloadfile.txt script residing in Scripts folder
+And you will get a mp3 file which the ScrapperMin downloads for you instructed by DownloadFile.txt script residing in Scripts folder
