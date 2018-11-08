@@ -7,6 +7,8 @@ In deployment setting, determine the processor architecture and OS and use the f
 Scripts folder must be at the level of the executable.
 
 To test
->scrappermin.exe downloadfile.txt
+>ScrapperMin.exe DownloadFile.txt
+
+Note : in Linux/Mac both the executable and the scripts name is case sensitive
 
 And you will get a mp3 file which the ScrapperMin downloads for you instructed by downloadfile.txt script residing in Scripts folder
