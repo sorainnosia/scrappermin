@@ -9,6 +9,10 @@ Scripts folder must be at the level of the executable.
 To test
 >ScrapperMin.exe DownloadFile.txt
 
+To run on linux having amd64 processor architecture
+$ chmod +x ScrapperMinLinux64
+$ ./ScrapperMinLinux64 DownloadFile.txt
+
 Note : in Linux/Mac both the executable and the scripts name is case sensitive
 
 And you will get a mp3 file which the ScrapperMin downloads for you instructed by downloadfile.txt script residing in Scripts folder
