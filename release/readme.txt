@@ -9,11 +9,11 @@ In deployment setting, determine the processor architecture and OS and use the f
 Scripts folder must be at the level of the executable.
 
 To test
->ScrapperMin.exe DownloadFile.txt
+> ScrapperMin.exe DownloadFile.txt
 
 To run on linux having amd64 processor architecture
-$ chmod +x ScrapperMinLinux64
-$ ./ScrapperMinLinux64 DownloadFile.txt
+> chmod +x ScrapperMinLinux64
+> ./ScrapperMinLinux64 DownloadFile.txt
 
 Note : in Linux/Mac both the executable and the scripts name is case sensitive
 
