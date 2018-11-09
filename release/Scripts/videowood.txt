@@ -24,9 +24,9 @@ IF(GET('PG2'), 'CONTAINS', GET('USER'),
    SET('PG6', WC_MethodPage(GET('URL2'), 'GET', '', 'X-Requested-With=XMLHttpRequest'));
    SET('TOKEN2', SO_TagMatchSingle(GET('PG6'), 'name="_token"', 'value="', '"'));
    SET('PS3', JOIN('', '_token=', GET('TOKEN2'), '&label=English&defaultsub=on'));
-   SET('A', Ex_CreateSubtitleAss('C:\Sites\UTorrentService\encode\mkvextract.exe', GET('FILE')));
+   SET('A', SO_CreateSubtitleAss('C:\Sites\UTorrentService\encode\mkvextract.exe', GET('FILE')));
    IF(GET('A'), '=', '', EXIT(GET('URL')), PASS());
-   SET('B', Ex_CreateSubtitleSrt('C:\Sites\UTorrentService\SAConv-1.2.2.0\SAConv.exe', GET('A')));
+   SET('B', SO_CreateSubtitleSrt('C:\Sites\UTorrentService\SAConv-1.2.2.0\SAConv.exe', GET('A')));
    IF(GET('B'), '=', '', EXIT(GET('URL')), PASS());
    SET('PG7', WC_MethodUploadFileForm(GET('URL3'), 'POST', 'subtitles', GET('B'), GET('PS3'), 'X-Requested-With=XMLHttpRequest'));
    EXIT(GET('URL'));
