@@ -1,0 +1,2879 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "ScrapperMin"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#BreakContinue">type BreakContinue</a></dd>
+				
+				
+			
+				
+				<dd><a href="#CookieWebClient">type CookieWebClient</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#InitWC">func InitWC() *CookieWebClient</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.AddCookie">func (wc *CookieWebClient) AddCookie(name string, value string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.AddNewCookie">func (wc *CookieWebClient) AddNewCookie(req *http.Request)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.ClearCookies">func (wc *CookieWebClient) ClearCookies()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.DictToString">func (wc *CookieWebClient) DictToString(dict map[string]string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.GetCookieFromResponse">func (wc *CookieWebClient) GetCookieFromResponse(res *http.Response)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.GetPage">func (wc *CookieWebClient) GetPage(uri string, referer string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.MethodDownloadFileForm">func (wc *CookieWebClient) MethodDownloadFileForm(uri string, method string, fpath string, filename string, params string, headers string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.MethodDownloadFileFormReal">func (wc *CookieWebClient) MethodDownloadFileFormReal(uri string, method string, fpath string, filename string, params map[string]string, headers map[string]string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.MethodPage">func (wc *CookieWebClient) MethodPage(uri string, method string, poststring string, headers string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.MethodPageForm">func (wc *CookieWebClient) MethodPageForm(uri string, method string, params string, headers string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.MethodPageFormReal">func (wc *CookieWebClient) MethodPageFormReal(uri string, method string, params map[string]string, headers map[string]string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.MethodUploadFileForm">func (wc *CookieWebClient) MethodUploadFileForm(uri string, method string, paramName string, path string, params string, headers string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.MethodUploadFileFormMultiple">func (wc *CookieWebClient) MethodUploadFileFormMultiple(uri string, method string, files string, params string, headers string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.MethodUploadFileFormMultipleReal">func (wc *CookieWebClient) MethodUploadFileFormMultipleReal(uri string, method string, files map[string]string, params map[string]string, headers map[string]string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.ReadResponse">func (wc *CookieWebClient) ReadResponse(rsp *http.Response) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.SetAccept">func (wc *CookieWebClient) SetAccept(s string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.SetAutomaticDecompression">func (wc *CookieWebClient) SetAutomaticDecompression(s string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.SetCookieToRequest">func (wc *CookieWebClient) SetCookieToRequest(req *http.Request)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.SetHeaders">func (wc *CookieWebClient) SetHeaders(req *http.Request)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.SetKeepAlive">func (wc *CookieWebClient) SetKeepAlive(s string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.SetLanguage">func (wc *CookieWebClient) SetLanguage(s string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CookieWebClient.StringToDict">func (wc *CookieWebClient) StringToDict(params string) map[string]string</a></dd>
+				
+			
+				
+				<dd><a href="#IfForWhile">type IfForWhile</a></dd>
+				
+				
+			
+				
+				<dd><a href="#MathInteger">type MathInteger</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#InitMI">func InitMI() *MathInteger</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MathInteger.Add">func (mi *MathInteger) Add(a string, b string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MathInteger.Divide">func (mi *MathInteger) Divide(a string, b string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MathInteger.GetInt">func (*MathInteger) GetInt(str string) (int, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MathInteger.Minus">func (mi *MathInteger) Minus(a string, b string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MathInteger.Modulus">func (mi *MathInteger) Modulus(a string, b string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MathInteger.Times">func (mi *MathInteger) Times(a string, b string) (string, error)</a></dd>
+				
+			
+				
+				<dd><a href="#MyPath">type MyPath</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#InitMP">func InitMP() *MyPath</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MyPath.FileExist">func (mp *MyPath) FileExist(filename string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MyPath.GetAbsPath">func (mp *MyPath) GetAbsPath(filename string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MyPath.GetCurrentPath">func (mp *MyPath) GetCurrentPath(filename string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MyPath.GetFileExtension">func (so *MyPath) GetFileExtension(filename string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MyPath.GetFilenameWithoutExtension">func (so *MyPath) GetFilenameWithoutExtension(fn string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MyPath.GetFiles">func (mp *MyPath) GetFiles(dir string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MyPath.GetPlugins">func (mp *MyPath) GetPlugins() []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MyPath.GetScripts">func (mp *MyPath) GetScripts() []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MyPath.GetSubDirMatch">func (mp *MyPath) GetSubDirMatch(subdir string, match string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MyPath.PathFileLength">func (mp *MyPath) PathFileLength(filename string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MyPath.PathGetFileName">func (mp *MyPath) PathGetFileName(filename string) string</a></dd>
+				
+			
+				
+				<dd><a href="#ScrapperMin">type ScrapperMin</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#InitSM">func InitSM() *ScrapperMin</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.AddRange">func (sm *ScrapperMin) AddRange(output []string, newadd []string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.BuildSyntaxTree">func (sm *ScrapperMin) BuildSyntaxTree(str string) ([][]*SyntaxCommand, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.ConstructQuery">func (sm *ScrapperMin) ConstructQuery(str string, parameters []string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.Contains">func (sm *ScrapperMin) Contains(sp1 []string, sp2 []string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.DecodeQuote">func (sm *ScrapperMin) DecodeQuote(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.DoLog">func (sm *ScrapperMin) DoLog(str string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.EncodeQuote">func (sm *ScrapperMin) EncodeQuote(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.EndsWith">func (sm *ScrapperMin) EndsWith(sp1 []string, sp2 []string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.Equal">func (sm *ScrapperMin) Equal(sp1 []string, sp2 []string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.Evaluate">func (sm *ScrapperMin) Evaluate(commands [][]*SyntaxCommand) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.EvaluateSingle">func (sm *ScrapperMin) EvaluateSingle(com *SyntaxCommand, brc *BreakContinue) ([][]string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.EvaluateSingleInner">func (sm *ScrapperMin) EvaluateSingleInner(cmd *SyntaxCommand, index int, param []string, brc *BreakContinue, ifw *IfForWhile) ([]string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.ExecuteFunction">func (sm *ScrapperMin) ExecuteFunction(funcname string, obj interface{}, args [][]string) ([]reflect.Value, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.FindTarget">func (sm *ScrapperMin) FindTarget(methodname string) interface{}</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.Format">func (sm *ScrapperMin) Format(ph string, objs []string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.GetEnd">func (sm *ScrapperMin) GetEnd(str2 string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.GetExecuteTrue">func (sm *ScrapperMin) GetExecuteTrue(ifw *IfForWhile) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.GetListListStringIndex">func (*ScrapperMin) GetListListStringIndex(str [][]string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.GetListListStringIndexSkip0">func (*ScrapperMin) GetListListStringIndexSkip0(paramIndex int, str [][]string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.GetLoop">func (sm *ScrapperMin) GetLoop(str string) ([]*SyntaxCommand, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.GetRem">func (sm *ScrapperMin) GetRem(str string) ([]*SyntaxCommand, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.GreaterLesser">func (sm *ScrapperMin) GreaterLesser(sp1 []string, sp2 []string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.InvokeMethod">func (sm *ScrapperMin) InvokeMethod(methodName string, parameters [][]string) ([]string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.IsFunctionName">func (sm *ScrapperMin) IsFunctionName(str byte) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.Multiple">func (sm *ScrapperMin) Multiple(str string, parameters []string) ([]string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.RetainResultIndex0">func (sm *ScrapperMin) RetainResultIndex0(result [][]string, Index0 string) [][]string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.StartsWith">func (sm *ScrapperMin) StartsWith(sp1 []string, sp2 []string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ScrapperMin.Within">func (sm *ScrapperMin) Within(sp1 []string, sp2 []string) bool</a></dd>
+				
+			
+				
+				<dd><a href="#StringOps">type StringOps</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#InitSO">func InitSO() *StringOps</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.AppendFile">func (so *StringOps) AppendFile(filename string, text []string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.AppendToFile">func (so *StringOps) AppendToFile(filename string, text string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.ClearFile">func (so *StringOps) ClearFile(filename string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.ConvertFromBase64">func (so *StringOps) ConvertFromBase64(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.ConvertToBase64">func (so *StringOps) ConvertToBase64(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.CreateSubtitleAss">func (so *StringOps) CreateSubtitleAss(file string, video string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.CreateSubtitleSrt">func (so *StringOps) CreateSubtitleSrt(file string, video string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.CurrDate">func (so *StringOps) CurrDate(format string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.CurrDateOffset">func (so *StringOps) CurrDateOffset(format string, day string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.EndsWith">func (so *StringOps) EndsWith(a string, b string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.Equal">func (so *StringOps) Equal(a string, b string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.EscapeDataString">func (so *StringOps) EscapeDataString(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.EscapeUriString">func (so *StringOps) EscapeUriString(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.FileDelete">func (so *StringOps) FileDelete(filename string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.FileExist">func (so *StringOps) FileExist(filename string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.GetFileExtension">func (so *StringOps) GetFileExtension(filename string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.GetFilenameWithoutExtension">func (so *StringOps) GetFilenameWithoutExtension(filename string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.GetInt">func (so *StringOps) GetInt(str string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.GetMd5Hash">func (so *StringOps) GetMd5Hash(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.GetTag">func (so *StringOps) GetTag(content string, index int) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.HtmlDecode">func (so *StringOps) HtmlDecode(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.HtmlEncode">func (so *StringOps) HtmlEncode(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.IndexOf">func (so *StringOps) IndexOf(a string, b string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.IndexStart">func (so *StringOps) IndexStart(webContent string, tagStart string, start int) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.InsertList">func (so *StringOps) InsertList(list []string, item string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.InsideFile">func (so *StringOps) InsideFile(filename string, str2 string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.IsContainChinese">func (so *StringOps) IsContainChinese(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.IsInFile">func (so *StringOps) IsInFile(filename string, text string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.LastIndexStart">func (so *StringOps) LastIndexStart(webContent string, tagStart string, start int) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.LoadFile">func (so *StringOps) LoadFile(filename string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.Makan">func (so *StringOps) Makan(a string, b string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.Min">func (so *StringOps) Min(x, y int) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.OtherDate">func (so *StringOps) OtherDate(dd string, mm string, yyyy string, format string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.OtherDateOffset">func (so *StringOps) OtherDateOffset(dd string, mm string, yyyy string, format string, day string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.PadLeft">func (so *StringOps) PadLeft(value int, charused string, amount int) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.PathFileLength">func (so *StringOps) PathFileLength(filename string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.PathGetFileName">func (so *StringOps) PathGetFileName(filename string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.RandomInteger">func (so *StringOps) RandomInteger(n int) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.RandomNext">func (so *StringOps) RandomNext(i string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.RandomString">func (so *StringOps) RandomString(n int) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.ReadAllText">func (so *StringOps) ReadAllText(filename string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.RemoveChinese">func (so *StringOps) RemoveChinese(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.SOGetEnd">func (so *StringOps) SOGetEnd(text string, search string, endsearch string, start int, end int) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.SingleTagMatch">func (so *StringOps) SingleTagMatch(content string, search string, endsearch string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.StartsWith">func (so *StringOps) StartsWith(a string, b string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.StripHTML">func (so *StringOps) StripHTML(content string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.Substring">func (*StringOps) Substring(webContent string, start int, count int) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.SubstringEnd">func (so *StringOps) SubstringEnd(webContent string, start int) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.SubstringIndexOf">func (so *StringOps) SubstringIndexOf(str string, start string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.SubstringIndexOfLast">func (so *StringOps) SubstringIndexOfLast(str string, start string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.SubstringLastIndexOf">func (so *StringOps) SubstringLastIndexOf(str string, start string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.SubstringLastIndexOfLast">func (so *StringOps) SubstringLastIndexOfLast(str string, start string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.TagMatch">func (so *StringOps) TagMatch(webContent string, tagStart string, tagEnd string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.TagMatchFromBehind">func (so *StringOps) TagMatchFromBehind(webContent string, tagStart string, tagEnd string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.TagMatchSingle">func (so *StringOps) TagMatchSingle(content string, containing string, attributeStart string, attributeEnd string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.TagMatchSkip">func (so *StringOps) TagMatchSkip(webContent string, tagStart string, tagEnd string, skipStart string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.TrimUp">func (so *StringOps) TrimUp(str string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.UrlDecode">func (so *StringOps) UrlDecode(content string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#StringOps.UrlEncode">func (so *StringOps) UrlEncode(content string) string</a></dd>
+				
+			
+				
+				<dd><a href="#SyntaxCommand">type SyntaxCommand</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/ScrapperMin/CookieWebClient.go">CookieWebClient.go</a>
+			
+				<a href="/src/ScrapperMin/MathInteger.go">MathInteger.go</a>
+			
+				<a href="/src/ScrapperMin/MyPath.go">MyPath.go</a>
+			
+				<a href="/src/ScrapperMin/ScrapperMin.go">ScrapperMin.go</a>
+			
+				<a href="/src/ScrapperMin/StringsOps.go">StringsOps.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="BreakContinue">type <a href="/src/target/ScrapperMin.go?s=943:1006#L35">BreakContinue</a>
+				<a class="permalink" href="#BreakContinue">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+BreakContinue : Carry the behaviorof the syntax whether it is Break or Continue
+</p>
+
+			<pre>type BreakContinue struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CookieWebClient">type <a href="/src/target/CookieWebClient.go?s=294:641#L10">CookieWebClient</a>
+				<a class="permalink" href="#CookieWebClient">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+CookieWebClient : a struct with its method used for Web operations (creating/executing http request)
+</p>
+
+			<pre>type CookieWebClient struct {
+<span id="CookieWebClient.Client"></span>    Client                *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Client">Client</a>
+<span id="CookieWebClient.NewCookies"></span>    NewCookies            []*<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Cookie">Cookie</a>
+<span id="CookieWebClient.KeyValueSeparator"></span>    KeyValueSeparator     <a href="/pkg/builtin/#string">string</a>
+<span id="CookieWebClient.KeyValueItemSeparator"></span>    KeyValueItemSeparator <a href="/pkg/builtin/#string">string</a>
+<span id="CookieWebClient.Cookies"></span>    Cookies               *<a href="/pkg/net/http/cookiejar/">cookiejar</a>.<a href="/pkg/net/http/cookiejar/#Jar">Jar</a>
+<span id="CookieWebClient.OnErrorResume"></span>    OnErrorResume         <a href="/pkg/builtin/#bool">bool</a>
+<span id="CookieWebClient.VarKeepAlive"></span>    VarKeepAlive          <a href="/pkg/builtin/#bool">bool</a>
+<span id="CookieWebClient.VarLanguage"></span>    VarLanguage           <a href="/pkg/builtin/#string">string</a>
+<span id="CookieWebClient.Decompression"></span>    Decompression         <a href="/pkg/builtin/#bool">bool</a>
+<span id="CookieWebClient.VarAccept"></span>    VarAccept             <a href="/pkg/builtin/#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InitWC">func <a href="/src/target/CookieWebClient.go?s=761:791#L25">InitWC</a>
+					<a class="permalink" href="#InitWC">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func InitWC() *<a href="#CookieWebClient">CookieWebClient</a></pre>
+				<p>
+InitWC : create a new CookieWebClient object and setup the proxy when the environment variable HTTP_PROXY
+exist
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="CookieWebClient.AddCookie">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=5212:5275#L149">AddCookie</a>
+					<a class="permalink" href="#CookieWebClient.AddCookie">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) AddCookie(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+AddCookie : add a cookie to object and will be added to http request when a call is made
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.AddNewCookie">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=5470:5528#L157">AddNewCookie</a>
+					<a class="permalink" href="#CookieWebClient.AddNewCookie">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) AddNewCookie(req *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>)</pre>
+				<p>
+AddNewCookie : add a cookie to http request from list of temporary cookies saved in object
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.ClearCookies">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=3538:3579#L117">ClearCookies</a>
+					<a class="permalink" href="#CookieWebClient.ClearCookies">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) ClearCookies()</pre>
+				<p>
+ClearCookies : delete all the cookies captured from previous request
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.DictToString">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=2748:2818#L90">DictToString</a>
+					<a class="permalink" href="#CookieWebClient.DictToString">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) DictToString(dict map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+DictToString : return a string from map[string]string dictionary, example &#34;a=b&amp;c=d&#34; when given dictionary
+with key a vaue b and key c value d
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.GetCookieFromResponse">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=5740:5808#L165">GetCookieFromResponse</a>
+					<a class="permalink" href="#CookieWebClient.GetCookieFromResponse">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) GetCookieFromResponse(res *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Response">Response</a>)</pre>
+				<p>
+GetCookieFromResponse : get the cookies set in http response in headers clal Set-Cookie and
+save these cookies to the cookie jar of the object
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.GetPage">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=3818:3896#L125">GetPage</a>
+					<a class="permalink" href="#CookieWebClient.GetPage">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) GetPage(uri <a href="/pkg/builtin/#string">string</a>, referer <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetPage : an obsolte function that will make a call to website specified by uri and set the referer
+header specified by refer string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.MethodDownloadFileForm">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=4537:4691#L135">MethodDownloadFileForm</a>
+					<a class="permalink" href="#CookieWebClient.MethodDownloadFileForm">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) MethodDownloadFileForm(uri <a href="/pkg/builtin/#string">string</a>, method <a href="/pkg/builtin/#string">string</a>, fpath <a href="/pkg/builtin/#string">string</a>, filename <a href="/pkg/builtin/#string">string</a>, params <a href="/pkg/builtin/#string">string</a>, headers <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MethodDownloadFileForm : download a file from uri url with http method set to method and the directory to save
+the download called fpath and give the file name filename, the http request may contain params which is
+a multipart encoded body of the HTTP post request, which means this params argument will be empty if the the http
+method is get. Headers is the extra header to be sent out when requesting
+Filename to be saved can be infered from the url request if the server returns content-disposition header
+to get the inferred name empty filename argument.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.MethodDownloadFileFormReal">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=14063:14243#L408">MethodDownloadFileFormReal</a>
+					<a class="permalink" href="#CookieWebClient.MethodDownloadFileFormReal">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) MethodDownloadFileFormReal(uri <a href="/pkg/builtin/#string">string</a>, method <a href="/pkg/builtin/#string">string</a>, fpath <a href="/pkg/builtin/#string">string</a>, filename <a href="/pkg/builtin/#string">string</a>, params map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a>, headers map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MethodDownloadFileFormReal : download a file from uri url with http method set to method and the directory to save
+the download called fpath and give the file name filename, the http request may contain params which is
+a multipart encoded body of the HTTP post request, which means this params argument will be empty if the the http
+method is get and this param is in dictionary format. Headers is the extra header to be sent out when requesting
+Filename to be saved can be infered from the url request if the server returns content-disposition header
+to get the inferred name empty filename argument.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.MethodPage">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=9380:9495#L241">MethodPage</a>
+					<a class="permalink" href="#CookieWebClient.MethodPage">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) MethodPage(uri <a href="/pkg/builtin/#string">string</a>, method <a href="/pkg/builtin/#string">string</a>, poststring <a href="/pkg/builtin/#string">string</a>, headers <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MethodPage : making a url call specified by uri url with method specified by method argument
+and if the http method is POST the poststring contains a string body which will be sent in http body
+the body is in url encoded. The function also
+accept headers arguments which is extra headers of the http request
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.MethodPageForm">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=6591:6706#L193">MethodPageForm</a>
+					<a class="permalink" href="#CookieWebClient.MethodPageForm">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) MethodPageForm(uri <a href="/pkg/builtin/#string">string</a>, method <a href="/pkg/builtin/#string">string</a>, params <a href="/pkg/builtin/#string">string</a>, headers <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MethodPageForm : making a http request in GET or POST method, the params will be the body of the http request
+and will be sent in url encoded format, do note only POSt method can contains http body. The function also
+accept headers arguments which is extra headers of the http request
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.MethodPageFormReal">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=10717:10858#L287">MethodPageFormReal</a>
+					<a class="permalink" href="#CookieWebClient.MethodPageFormReal">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) MethodPageFormReal(uri <a href="/pkg/builtin/#string">string</a>, method <a href="/pkg/builtin/#string">string</a>, params map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a>, headers map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MethodPageFormReal : making a url call specified by uri url with method specified by method argument
+and if the http method is POST the poststring contains a string body which will be sent in http body
+the body is in multipart encoded. The function also
+accept headers arguments which is extra headers of the http request
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.MethodUploadFileForm">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=7320:7472#L202">MethodUploadFileForm</a>
+					<a class="permalink" href="#CookieWebClient.MethodUploadFileForm">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) MethodUploadFileForm(uri <a href="/pkg/builtin/#string">string</a>, method <a href="/pkg/builtin/#string">string</a>, paramName <a href="/pkg/builtin/#string">string</a>, path <a href="/pkg/builtin/#string">string</a>, params <a href="/pkg/builtin/#string">string</a>, headers <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MethodUploadFileForm : upload a file to http uri url with method specified in method argument, with the file
+given a key requires by the web server the key will be paramName and the file content to be uploaded is specified
+in path can path argument. The http request can contains http body if the method is POST and the content of the body
+is specified by params argument and will be sent in multipart encoded. The function also
+accept headers arguments which is extra headers of the http request
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.MethodUploadFileFormMultiple">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=8150:8293#L211">MethodUploadFileFormMultiple</a>
+					<a class="permalink" href="#CookieWebClient.MethodUploadFileFormMultiple">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) MethodUploadFileFormMultiple(uri <a href="/pkg/builtin/#string">string</a>, method <a href="/pkg/builtin/#string">string</a>, files <a href="/pkg/builtin/#string">string</a>, params <a href="/pkg/builtin/#string">string</a>, headers <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MethodUploadFileFormMultiple : upload multiple files to http uri url with method specified in method argument, with the file
+given a key requires by the web server the key will be paramName and the file content to be uploaded is specified
+in path can path argument. The http request can contains http body if the method is POST and the content of the body
+is specified by params argument and will be sent in multipart encoded. The function also
+accept headers arguments which is extra headers of the http request
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.MethodUploadFileFormMultipleReal">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=12200:12380#L343">MethodUploadFileFormMultipleReal</a>
+					<a class="permalink" href="#CookieWebClient.MethodUploadFileFormMultipleReal">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) MethodUploadFileFormMultipleReal(uri <a href="/pkg/builtin/#string">string</a>, method <a href="/pkg/builtin/#string">string</a>, files map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a>, params map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a>, headers map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MethodUploadFileFormMultipleReal : upload multiple files to http uri url with method specified in method argument,
+with the file
+given a dictionary containing multiple file key and file path. The http request can contains http body
+</p>
+<pre>if the method is POST and the content of the body
+</pre>
+<p>
+is specified by params argument and will be sent in multipart encoded. The function also
+accept headers arguments which is extra headers of the http request
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.ReadResponse">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=8617:8692#L217">ReadResponse</a>
+					<a class="permalink" href="#CookieWebClient.ReadResponse">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) ReadResponse(rsp *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Response">Response</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ReadResponse : read a http response and converted into string, it also checks if the response header
+contains Content-Encoding gzip it will then decompress the content into string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.SetAccept">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=2046:2092#L67">SetAccept</a>
+					<a class="permalink" href="#CookieWebClient.SetAccept">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) SetAccept(s <a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+SetAccept : set the subsequent call of http request to add header &#34;Accept : &lt;s argument&gt;&#34;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.SetAutomaticDecompression">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=1854:1916#L62">SetAutomaticDecompression</a>
+					<a class="permalink" href="#CookieWebClient.SetAutomaticDecompression">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) SetAutomaticDecompression(s <a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+SetAutomaticDecompression : set the request to accept gzip and compression format
+this called will auto decompress the gzip return from the server
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.SetCookieToRequest">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=4959:5023#L141">SetCookieToRequest</a>
+					<a class="permalink" href="#CookieWebClient.SetCookieToRequest">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) SetCookieToRequest(req *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>)</pre>
+				<p>
+SetCookieToRequest : set the cookies of http request from temporary cookie added from the AddCookie syntax
+which is stored at the object
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.SetHeaders">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=2247:2303#L73">SetHeaders</a>
+					<a class="permalink" href="#CookieWebClient.SetHeaders">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) SetHeaders(req *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>)</pre>
+				<p>
+SetHeaders : the actual method to set a header of a request specified by other methods which saves
+the setting to the struct
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.SetKeepAlive">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=1396:1445#L47">SetKeepAlive</a>
+					<a class="permalink" href="#CookieWebClient.SetKeepAlive">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) SetKeepAlive(s <a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+SetKeepAlive : set the subsequent call of http request to add header &#34;connection : keep-alive&#34;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.SetLanguage">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=1627:1675#L56">SetLanguage</a>
+					<a class="permalink" href="#CookieWebClient.SetLanguage">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) SetLanguage(s <a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+SetLanguage : set the subsequent call of http request to add header &#34;language : &lt;s argument&gt;&#34;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CookieWebClient.StringToDict">func (*CookieWebClient) <a href="/src/target/CookieWebClient.go?s=3176:3248#L104">StringToDict</a>
+					<a class="permalink" href="#CookieWebClient.StringToDict">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (wc *<a href="#CookieWebClient">CookieWebClient</a>) StringToDict(params <a href="/pkg/builtin/#string">string</a>) map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+StringToDict : a dict is &#34;a=b&amp;c=d&#34; and return it dictionary or type map[string]string containing key a and
+value b and key c and value
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="IfForWhile">type <a href="/src/target/ScrapperMin.go?s=1116:1441#L41">IfForWhile</a>
+				<a class="permalink" href="#IfForWhile">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+IfForWhile : Carry the behavior of the syntax whether it is inside If, For, While and other informations
+</p>
+
+			<pre>type IfForWhile struct {
+<span id="IfForWhile.ExecuteTrue"></span>    ExecuteTrue <a href="/pkg/builtin/#bool">bool</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="MathInteger">type <a href="/src/target/MathInteger.go?s=112:139#L1">MathInteger</a>
+				<a class="permalink" href="#MathInteger">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+MathInteger : Empty type to be used for integer math calculation
+</p>
+
+			<pre>type MathInteger struct {
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InitMI">func <a href="/src/target/MathInteger.go?s=181:207#L2">InitMI</a>
+					<a class="permalink" href="#InitMI">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func InitMI() *<a href="#MathInteger">MathInteger</a></pre>
+				<p>
+InitMi : Create a MathInteger object
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="MathInteger.Add">func (*MathInteger) <a href="/src/target/MathInteger.go?s=906:968#L29">Add</a>
+					<a class="permalink" href="#MathInteger.Add">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mi *<a href="#MathInteger">MathInteger</a>) Add(a <a href="/pkg/builtin/#string">string</a>, b <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Add : Add by b string that is parsed as integer from a which is also a parsed string and return the result as string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MathInteger.Divide">func (*MathInteger) <a href="/src/target/MathInteger.go?s=1621:1686#L55">Divide</a>
+					<a class="permalink" href="#MathInteger.Divide">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mi *<a href="#MathInteger">MathInteger</a>) Divide(a <a href="/pkg/builtin/#string">string</a>, b <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Divide  : Divide by b string that is parsed as integer from a which is also a parsed string and return the result as string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MathInteger.GetInt">func (*MathInteger) <a href="/src/target/MathInteger.go?s=292:343#L7">GetInt</a>
+					<a class="permalink" href="#MathInteger.GetInt">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (*<a href="#MathInteger">MathInteger</a>) GetInt(str <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#int">int</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetInt : Get integer from a string, and 0 if error
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MathInteger.Minus">func (*MathInteger) <a href="/src/target/MathInteger.go?s=553:617#L16">Minus</a>
+					<a class="permalink" href="#MathInteger.Minus">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mi *<a href="#MathInteger">MathInteger</a>) Minus(a <a href="/pkg/builtin/#string">string</a>, b <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Minus : Minus by b string that is parsed as integer from a which is also a parsed string and return the result as string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MathInteger.Modulus">func (*MathInteger) <a href="/src/target/MathInteger.go?s=1983:2049#L68">Modulus</a>
+					<a class="permalink" href="#MathInteger.Modulus">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mi *<a href="#MathInteger">MathInteger</a>) Modulus(a <a href="/pkg/builtin/#string">string</a>, b <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Modulus : Modulus by b string that is parsed as integer from a which is also a parsed string and return the result as string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MathInteger.Times">func (*MathInteger) <a href="/src/target/MathInteger.go?s=1261:1325#L42">Times</a>
+					<a class="permalink" href="#MathInteger.Times">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mi *<a href="#MathInteger">MathInteger</a>) Times(a <a href="/pkg/builtin/#string">string</a>, b <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Times : Times by b string that is parsed as integer from a which is also a parsed string and return the result as string
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="MyPath">type <a href="/src/target/MyPath.go?s=193:215#L4">MyPath</a>
+				<a class="permalink" href="#MyPath">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+MyPath : Empty struct to call its method to be used for directory or path operation
+</p>
+
+			<pre>type MyPath struct {
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InitMP">func <a href="/src/target/MyPath.go?s=217:238#L7">InitMP</a>
+					<a class="permalink" href="#InitMP">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func InitMP() *<a href="#MyPath">MyPath</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="MyPath.FileExist">func (*MyPath) <a href="/src/target/MyPath.go?s=2906:2957#L93">FileExist</a>
+					<a class="permalink" href="#MyPath.FileExist">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mp *<a href="#MyPath">MyPath</a>) FileExist(filename <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+FileExist : return 1 if the argument is a full or relative path and it is a file and exist, 0 when error
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MyPath.GetAbsPath">func (*MyPath) <a href="/src/target/MyPath.go?s=1988:2040#L66">GetAbsPath</a>
+					<a class="permalink" href="#MyPath.GetAbsPath">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mp *<a href="#MyPath">MyPath</a>) GetAbsPath(filename <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetAbsPath : if argument is a full path it return as it is, if it is relative path
+will use current path and return the full path
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MyPath.GetCurrentPath">func (*MyPath) <a href="/src/target/MyPath.go?s=1681:1737#L56">GetCurrentPath</a>
+					<a class="permalink" href="#MyPath.GetCurrentPath">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mp *<a href="#MyPath">MyPath</a>) GetCurrentPath(filename <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetCurrentPath : Given a filename only, return the full path of the filename relative to current path
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MyPath.GetFileExtension">func (*MyPath) <a href="/src/target/MyPath.go?s=3349:3407#L107">GetFileExtension</a>
+					<a class="permalink" href="#MyPath.GetFileExtension">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#MyPath">MyPath</a>) GetFileExtension(filename <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetFileExtension : return the extension of a relative or full path of a file with dot, example .txt
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MyPath.GetFilenameWithoutExtension">func (*MyPath) <a href="/src/target/MyPath.go?s=3132:3195#L102">GetFilenameWithoutExtension</a>
+					<a class="permalink" href="#MyPath.GetFilenameWithoutExtension">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#MyPath">MyPath</a>) GetFilenameWithoutExtension(fn <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetFilenameWithoutExtension : return the filename only of a relative or full path of a file
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MyPath.GetFiles">func (*MyPath) <a href="/src/target/MyPath.go?s=350:397#L12">GetFiles</a>
+					<a class="permalink" href="#MyPath.GetFiles">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mp *<a href="#MyPath">MyPath</a>) GetFiles(dir <a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetFiles : Get all files in a directory in full path and return as array of string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MyPath.GetPlugins">func (*MyPath) <a href="/src/target/MyPath.go?s=1485:1524#L51">GetPlugins</a>
+					<a class="permalink" href="#MyPath.GetPlugins">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mp *<a href="#MyPath">MyPath</a>) GetPlugins() []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetScripts : Get all files in SMPlugins folder relative to current path in full path format ends with .SO
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MyPath.GetScripts">func (*MyPath) <a href="/src/target/MyPath.go?s=1286:1325#L46">GetScripts</a>
+					<a class="permalink" href="#MyPath.GetScripts">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mp *<a href="#MyPath">MyPath</a>) GetScripts() []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetScripts : Get all files in Scripts folder relative to current path in full path format ends with .TXT
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MyPath.GetSubDirMatch">func (*MyPath) <a href="/src/target/MyPath.go?s=802:872#L29">GetSubDirMatch</a>
+					<a class="permalink" href="#MyPath.GetSubDirMatch">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mp *<a href="#MyPath">MyPath</a>) GetSubDirMatch(subdir <a href="/pkg/builtin/#string">string</a>, match <a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetSubDirMatch : Get all files from a subdirectory that is relative to current path
+return all files in full path, the file must match the extension of the match argument
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MyPath.PathFileLength">func (*MyPath) <a href="/src/target/MyPath.go?s=2628:2684#L84">PathFileLength</a>
+					<a class="permalink" href="#MyPath.PathFileLength">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mp *<a href="#MyPath">MyPath</a>) PathFileLength(filename <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+PathFileLength : return the size of the file given in full or relative path in Bytes as a string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MyPath.PathGetFileName">func (*MyPath) <a href="/src/target/MyPath.go?s=2419:2476#L78">PathGetFileName</a>
+					<a class="permalink" href="#MyPath.PathGetFileName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (mp *<a href="#MyPath">MyPath</a>) PathGetFileName(filename <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+PathGetFileName : return the filename only of a full or relative path
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ScrapperMin">type <a href="/src/target/ScrapperMin.go?s=193:415#L3">ScrapperMin</a>
+				<a class="permalink" href="#ScrapperMin">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Represent a ScrapperMin object which contains objects such as SO, MI, WC to be used by the scripts
+</p>
+
+			<pre>type ScrapperMin struct {
+<span id="ScrapperMin.OnLoop"></span>    OnLoop          <a href="/pkg/builtin/#bool">bool</a>
+<span id="ScrapperMin.IsRunning"></span>    IsRunning       <a href="/pkg/builtin/#bool">bool</a>
+<span id="ScrapperMin.CancelExecution"></span>    CancelExecution <a href="/pkg/builtin/#bool">bool</a>
+<span id="ScrapperMin.MyVariable"></span>    MyVariable      map[<a href="/pkg/builtin/#string">string</a>][]<a href="/pkg/builtin/#string">string</a>
+<span id="ScrapperMin.WC"></span>    WC              *<a href="#CookieWebClient">CookieWebClient</a>
+<span id="ScrapperMin.MI"></span>    MI              *<a href="#MathInteger">MathInteger</a>
+<span id="ScrapperMin.SO"></span>    SO              *<a href="#StringOps">StringOps</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InitSM">func <a href="/src/target/ScrapperMin.go?s=461:487#L14">InitSM</a>
+					<a class="permalink" href="#InitSM">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func InitSM() *<a href="#ScrapperMin">ScrapperMin</a></pre>
+				<p>
+InitSM : Initialise a ScrapperMin struct
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ScrapperMin.AddRange">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=3964:4038#L145">AddRange</a>
+					<a class="permalink" href="#ScrapperMin.AddRange">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) AddRange(output []<a href="/pkg/builtin/#string">string</a>, newadd []<a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+AddRange : Append an array of string with another array of string and return it
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.BuildSyntaxTree">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=31432:31510#L1089">BuildSyntaxTree</a>
+					<a class="permalink" href="#ScrapperMin.BuildSyntaxTree">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) BuildSyntaxTree(str <a href="/pkg/builtin/#string">string</a>) ([][]*<a href="#SyntaxCommand">SyntaxCommand</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+BuildSyntaxTree : Building a syntax tree from a string, a syntax tree containing a tree with
+each element is represented by SyntaxCommand struct containing the command of the syntax and arguments of it
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.ConstructQuery">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=35927:36004#L1249">ConstructQuery</a>
+					<a class="permalink" href="#ScrapperMin.ConstructQuery">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) ConstructQuery(str <a href="/pkg/builtin/#string">string</a>, parameters []<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+ConstructQuery : remove all arguments place holder inside a script string and replace it with arguments specified
+to ScrapperMin, place holder has format {PARAMx} with x is the index of the argument
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.Contains">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=16857:16921#L601">Contains</a>
+					<a class="permalink" href="#ScrapperMin.Contains">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) Contains(sp1 []<a href="/pkg/builtin/#string">string</a>, sp2 []<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Contains : Return true when first argument has string in index 0 and it contains a substring of the string in
+index 0 of second argument
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.DecodeQuote">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=4463:4516#L162">DecodeQuote</a>
+					<a class="permalink" href="#ScrapperMin.DecodeQuote">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) DecodeQuote(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+DecodeQuote : A string that is surrounded with single quote is stripped from the surrounded quotes and return it
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.DoLog">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=5580:5620#L201">DoLog</a>
+					<a class="permalink" href="#ScrapperMin.DoLog">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) DoLog(str <a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+DoLog : Logging str into standard output
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.EncodeQuote">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=4202:4255#L153">EncodeQuote</a>
+					<a class="permalink" href="#ScrapperMin.EncodeQuote">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) EncodeQuote(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+EncodeQuote : Surround a string with single quote and return it
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.EndsWith">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=15820:15884#L557">EndsWith</a>
+					<a class="permalink" href="#ScrapperMin.EndsWith">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) EndsWith(sp1 []<a href="/pkg/builtin/#string">string</a>, sp2 []<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+EndsWith : Compare if two array of string if the string in first argument index 0
+ends with a string in index 0 of second argument, return true when does
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.Equal">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=13929:13990#L485">Equal</a>
+					<a class="permalink" href="#ScrapperMin.Equal">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) Equal(sp1 []<a href="/pkg/builtin/#string">string</a>, sp2 []<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Equal : Compare two array of string to be equal
+To be equal it needs to have same length and first index string must be equal but not case sensitive
+return true when equal
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.Evaluate">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=30645:30714#L1061">Evaluate</a>
+					<a class="permalink" href="#ScrapperMin.Evaluate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) Evaluate(commands [][]*<a href="#SyntaxCommand">SyntaxCommand</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+Evaluate : Evaluate a list of 2 dimensional SyntaxCommand and return list of string
+it will call EvaluateSingle and return its value
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.EvaluateSingle">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=19192:19289#L650">EvaluateSingle</a>
+					<a class="permalink" href="#ScrapperMin.EvaluateSingle">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) EvaluateSingle(com *<a href="#SyntaxCommand">SyntaxCommand</a>, brc *<a href="#BreakContinue">BreakContinue</a>) ([][]<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+EvaluateSingle : Evaluate a single SyntaxCommand which will call EvaluateSingleInner and
+it will be recursive when necessary. A command when evaluated will return a string or array of string
+This method will return array of string with one element when the function return only a single string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.EvaluateSingleInner">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=9314:9458#L314">EvaluateSingleInner</a>
+					<a class="permalink" href="#ScrapperMin.EvaluateSingleInner">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) EvaluateSingleInner(cmd *<a href="#SyntaxCommand">SyntaxCommand</a>, index <a href="/pkg/builtin/#int">int</a>, param []<a href="/pkg/builtin/#string">string</a>, brc *<a href="#BreakContinue">BreakContinue</a>, ifw *<a href="#IfForWhile">IfForWhile</a>) ([]<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+EvaluateSingleInner : Evaluate a function given a SyntaxCommand, it will be recursive if necessary
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.ExecuteFunction">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=6047:6161#L210">ExecuteFunction</a>
+					<a class="permalink" href="#ScrapperMin.ExecuteFunction">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) ExecuteFunction(funcname <a href="/pkg/builtin/#string">string</a>, obj interface{}, args [][]<a href="/pkg/builtin/#string">string</a>) ([]<a href="/pkg/reflect/">reflect</a>.<a href="/pkg/reflect/#Value">Value</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ExecuteFunction : Execute a function name funcname attached to obj object, and pass in args as argument
+Args is 2 dimensional array of string with each array represent a single argument
+ScrapperMin function can only accept string or array of string
+This function detects the argument type of intended function and convert array of string into
+Single array of string or remain it as it is
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.FindTarget">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=7030:7094#L245">FindTarget</a>
+					<a class="permalink" href="#ScrapperMin.FindTarget">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) FindTarget(methodname <a href="/pkg/builtin/#string">string</a>) interface{}</pre>
+				<p>
+FindTarget : Find a target plugin to load based on the method name
+All plugins must contains unique method name
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.Format">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=4778:4840#L172">Format</a>
+					<a class="permalink" href="#ScrapperMin.Format">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) Format(ph <a href="/pkg/builtin/#string">string</a>, objs []<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+Format : Format a string with {index} place holder, where index is the index of the replacement
+The replacement is an array of string and return the formatted text
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.GetEnd">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=2024:2082#L69">GetEnd</a>
+					<a class="permalink" href="#ScrapperMin.GetEnd">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) GetEnd(str2 <a href="/pkg/builtin/#string">string</a>) (<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetEnd : Get the End matching ending bracket for a start bracket return the string as a whole
+Bracket can be nested and the matched ending is meant for the start bracket
+And returning the whole text until the end of matching bracket, does not include the start bracket
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.GetExecuteTrue">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=17362:17422#L620">GetExecuteTrue</a>
+					<a class="permalink" href="#ScrapperMin.GetExecuteTrue">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) GetExecuteTrue(ifw *<a href="#IfForWhile">IfForWhile</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				<p>
+GetExecuteTrue : Used by parser to determine whether the IF statement of the script returns true
+When does it will execute the script in the block
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.GetListListStringIndex">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=3092:3159#L111">GetListListStringIndex</a>
+					<a class="permalink" href="#ScrapperMin.GetListListStringIndex">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (*<a href="#ScrapperMin">ScrapperMin</a>) GetListListStringIndex(str [][]<a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetListListStringIndex : Get an array of string from a 2 dimensional string array by appending
+everything into one dimension and return the one dimensional array
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.GetListListStringIndexSkip0">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=3471:3559#L123">GetListListStringIndexSkip0</a>
+					<a class="permalink" href="#ScrapperMin.GetListListStringIndexSkip0">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (*<a href="#ScrapperMin">ScrapperMin</a>) GetListListStringIndexSkip0(paramIndex <a href="/pkg/builtin/#int">int</a>, str [][]<a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetListListStringIndexSkip0 : Get the first string in every array containing array of string and
+make it an array of string and return it
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.GetLoop">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=35158:35226#L1222">GetLoop</a>
+					<a class="permalink" href="#ScrapperMin.GetLoop">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) GetLoop(str <a href="/pkg/builtin/#string">string</a>) ([]*<a href="#SyntaxCommand">SyntaxCommand</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetLoop : Script can contains a syntax name LOOP when it does, this function marks the script to be always repeated
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.GetRem">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=34477:34544#L1196">GetRem</a>
+					<a class="permalink" href="#ScrapperMin.GetRem">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) GetRem(str <a href="/pkg/builtin/#string">string</a>) ([]*<a href="#SyntaxCommand">SyntaxCommand</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetRem : Most script have remarks at few first lines of the script
+Function will return list of SyntaxCommand containing all those remarks represented by SyntaxCommand struct
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.GreaterLesser">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=14607:14675#L504">GreaterLesser</a>
+					<a class="permalink" href="#ScrapperMin.GreaterLesser">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) GreaterLesser(sp1 []<a href="/pkg/builtin/#string">string</a>, sp2 []<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#int">int</a></pre>
+				<p>
+GreaterLesser : Compare if two array of string is greater or lesser
+It will get the first index of both arguments and parse it into Float and compare it
+both string can have different array length and the comparison only occur at first index
+return integer containing -1 if first argument is lesser than second argument
+0 when equal and 1 if the first argument is greater than second
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.InvokeMethod">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=7510:7605#L253">InvokeMethod</a>
+					<a class="permalink" href="#ScrapperMin.InvokeMethod">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) InvokeMethod(methodName <a href="/pkg/builtin/#string">string</a>, parameters [][]<a href="/pkg/builtin/#string">string</a>) ([]<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+InvokeMethod : Invoke a method which will call Execute function, this method is the caller of ExecuteFunction
+that does translating the return result into the correct type. ScrapperMin can only return string
+or array of string. It also determines which object&#39;s function to be called
+WC will call CookieWebClient object, SO will call StringOps object, MI will call MathInteger object
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.IsFunctionName">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=1529:1581#L58">IsFunctionName</a>
+					<a class="permalink" href="#ScrapperMin.IsFunctionName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) IsFunctionName(str <a href="/pkg/builtin/#byte">byte</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsFunctionName : Determine the str is a valid function name, return true when does
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.Multiple">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=36267:36349#L1260">Multiple</a>
+					<a class="permalink" href="#ScrapperMin.Multiple">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) Multiple(str <a href="/pkg/builtin/#string">string</a>, parameters []<a href="/pkg/builtin/#string">string</a>) ([]<a href="/pkg/builtin/#string">string</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Multiple : to execute a script string and return array of string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.RetainResultIndex0">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=5216:5302#L187">RetainResultIndex0</a>
+					<a class="permalink" href="#ScrapperMin.RetainResultIndex0">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) RetainResultIndex0(result [][]<a href="/pkg/builtin/#string">string</a>, Index0 <a href="/pkg/builtin/#string">string</a>) [][]<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+RetainResultIndex0 : Get the first array of an array of string and return it as 2 dimensional array string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.StartsWith">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=15305:15371#L538">StartsWith</a>
+					<a class="permalink" href="#ScrapperMin.StartsWith">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) StartsWith(sp1 []<a href="/pkg/builtin/#string">string</a>, sp2 []<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+StartsWith : Compare if two array of string if the string in first argument index 0
+start with a string in index 0 of second argument, return true when does
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ScrapperMin.Within">func (*ScrapperMin) <a href="/src/target/ScrapperMin.go?s=16311:16373#L576">Within</a>
+					<a class="permalink" href="#ScrapperMin.Within">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (sm *<a href="#ScrapperMin">ScrapperMin</a>) Within(sp1 []<a href="/pkg/builtin/#string">string</a>, sp2 []<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Within : Return true when first argument has any string equal to the string in index 0 of second argument
+The case is not sensitive
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StringOps">type <a href="/src/target/StringsOps.go?s=315:400#L11">StringOps</a>
+				<a class="permalink" href="#StringOps">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+StringOps : a struct that is used to call its method for String Operations related
+</p>
+
+			<pre>type StringOps struct {
+<span id="StringOps.Ascii"></span>    Ascii <a href="/pkg/builtin/#string">string</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InitSO">func <a href="/src/target/StringsOps.go?s=532:556#L23">InitSO</a>
+					<a class="permalink" href="#InitSO">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func InitSO() *<a href="#StringOps">StringOps</a></pre>
+				<p>
+InitSO : return StringOps object to be used
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="StringOps.AppendFile">func (*StringOps) <a href="/src/target/StringsOps.go?s=15911:15974#L502">AppendFile</a>
+					<a class="permalink" href="#StringOps.AppendFile">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) AppendFile(filename <a href="/pkg/builtin/#string">string</a>, text []<a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+AppendFile : add an array of string to a file split by New Line character at the end of the file
+the file is supposed to contains multiple lines of strings and when loaded with LoadFile
+will return the array of string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.AppendToFile">func (*StringOps) <a href="/src/target/StringsOps.go?s=15181:15244#L482">AppendToFile</a>
+					<a class="permalink" href="#StringOps.AppendToFile">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) AppendToFile(filename <a href="/pkg/builtin/#string">string</a>, text <a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+AppendToFile : add a new string to a file content ending with New Line character
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.ClearFile">func (*StringOps) <a href="/src/target/StringsOps.go?s=16232:16279#L513">ClearFile</a>
+					<a class="permalink" href="#StringOps.ClearFile">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) ClearFile(filename <a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+ClearFile : delete a file when exist
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.ConvertFromBase64">func (*StringOps) <a href="/src/target/StringsOps.go?s=11943:12000#L381">ConvertFromBase64</a>
+					<a class="permalink" href="#StringOps.ConvertFromBase64">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) ConvertFromBase64(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+ConvertFromBase64 : Convert a base64 string to a normal string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.ConvertToBase64">func (*StringOps) <a href="/src/target/StringsOps.go?s=11747:11802#L375">ConvertToBase64</a>
+					<a class="permalink" href="#StringOps.ConvertToBase64">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) ConvertToBase64(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+ConvertToBase64 : Convert a string to a base64 string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.CreateSubtitleAss">func (*StringOps) <a href="/src/target/StringsOps.go?s=10237:10309#L325">CreateSubtitleAss</a>
+					<a class="permalink" href="#StringOps.CreateSubtitleAss">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) CreateSubtitleAss(file <a href="/pkg/builtin/#string">string</a>, video <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="StringOps.CreateSubtitleSrt">func (*StringOps) <a href="/src/target/StringsOps.go?s=10326:10398#L329">CreateSubtitleSrt</a>
+					<a class="permalink" href="#StringOps.CreateSubtitleSrt">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) CreateSubtitleSrt(file <a href="/pkg/builtin/#string">string</a>, video <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="StringOps.CurrDate">func (*StringOps) <a href="/src/target/StringsOps.go?s=18543:18594#L595">CurrDate</a>
+					<a class="permalink" href="#StringOps.CurrDate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) CurrDate(format <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+CurrDate : return current date formatted with format argument
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.CurrDateOffset">func (*StringOps) <a href="/src/target/StringsOps.go?s=18825:18894#L602">CurrDateOffset</a>
+					<a class="permalink" href="#StringOps.CurrDateOffset">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) CurrDateOffset(format <a href="/pkg/builtin/#string">string</a>, day <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+CurrDateOffset : return current date added the day with day argument which is a string but parse as integer
+and return the result formatted with format argument
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.EndsWith">func (*StringOps) <a href="/src/target/StringsOps.go?s=17214:17270#L548">EndsWith</a>
+					<a class="permalink" href="#StringOps.EndsWith">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) EndsWith(a <a href="/pkg/builtin/#string">string</a>, b <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+EndsWith : determine string a has a string ended by b string, return &#34;1&#34; when does
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.Equal">func (*StringOps) <a href="/src/target/StringsOps.go?s=16698:16751#L532">Equal</a>
+					<a class="permalink" href="#StringOps.Equal">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) Equal(a <a href="/pkg/builtin/#string">string</a>, b <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+Equal : determine two strings is equal and return &#34;1&#34; when does, case is not sensitive and string
+will be trimmed from whitespace
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.EscapeDataString">func (*StringOps) <a href="/src/target/StringsOps.go?s=11236:11292#L360">EscapeDataString</a>
+					<a class="permalink" href="#StringOps.EscapeDataString">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) EscapeDataString(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+EscapeDatastring : escape a query string from url example encoding space to %20
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.EscapeUriString">func (*StringOps) <a href="/src/target/StringsOps.go?s=11064:11119#L355">EscapeUriString</a>
+					<a class="permalink" href="#StringOps.EscapeUriString">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) EscapeUriString(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+EscapeUristring : escape a url string example encoding space to %20
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.FileDelete">func (*StringOps) <a href="/src/target/StringsOps.go?s=16417:16465#L522">FileDelete</a>
+					<a class="permalink" href="#StringOps.FileDelete">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) FileDelete(filename <a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+FileDelete : delete a file when exist
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.FileExist">func (*StringOps) <a href="/src/target/StringsOps.go?s=15542:15598#L493">FileExist</a>
+					<a class="permalink" href="#StringOps.FileExist">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) FileExist(filename <a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+FileXists : return an array of string with first string &#34;1&#34; when file exist otherwise contains &#34;0&#34;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.GetFileExtension">func (*StringOps) <a href="/src/target/StringsOps.go?s=12895:12956#L408">GetFileExtension</a>
+					<a class="permalink" href="#StringOps.GetFileExtension">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) GetFileExtension(filename <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetFileExtension : return the extension of a file from a full/relative path
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.GetFilenameWithoutExtension">func (*StringOps) <a href="/src/target/StringsOps.go?s=12658:12730#L402">GetFilenameWithoutExtension</a>
+					<a class="permalink" href="#StringOps.GetFilenameWithoutExtension">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) GetFilenameWithoutExtension(filename <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetFilenameWithoutExtension : return a filename only from a full/relative path and remove the extension
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.GetInt">func (*StringOps) <a href="/src/target/StringsOps.go?s=18359:18402#L586">GetInt</a>
+					<a class="permalink" href="#StringOps.GetInt">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) GetInt(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#int">int</a></pre>
+				<p>
+GetInt : parse a string as integer and return the integer
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.GetMd5Hash">func (*StringOps) <a href="/src/target/StringsOps.go?s=17700:17750#L563">GetMd5Hash</a>
+					<a class="permalink" href="#StringOps.GetMd5Hash">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) GetMd5Hash(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetMd5Hash : get the hash of a string using Md5 algorithm
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.GetTag">func (*StringOps) <a href="/src/target/StringsOps.go?s=6831:6892#L216">GetTag</a>
+					<a class="permalink" href="#StringOps.GetTag">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) GetTag(content <a href="/pkg/builtin/#string">string</a>, index <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+GetTag : given a content string, and an index which is located inside a tag, it return the whole tag string
+tag is refer as HTML starts with &lt; and ends with &gt;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.HtmlDecode">func (*StringOps) <a href="/src/target/StringsOps.go?s=11601:11651#L370">HtmlDecode</a>
+					<a class="permalink" href="#StringOps.HtmlDecode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) HtmlDecode(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+HtmlDecode : Decode HTML string when extract a paragraph from HTML such as converting &amp;amp; to &amp;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.HtmlEncode">func (*StringOps) <a href="/src/target/StringsOps.go?s=11414:11464#L365">HtmlEncode</a>
+					<a class="permalink" href="#StringOps.HtmlEncode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) HtmlEncode(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+HtmlEncode : Encode HTML string so that it can be used for HTML, such as &amp; to &amp;amp;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.IndexOf">func (*StringOps) <a href="/src/target/StringsOps.go?s=17494:17549#L557">IndexOf</a>
+					<a class="permalink" href="#StringOps.IndexOf">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) IndexOf(a <a href="/pkg/builtin/#string">string</a>, b <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+IndexOf : find the index of string b from string a, return -1 when can&#39;t find and return the index as
+string when found
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.IndexStart">func (*StringOps) <a href="/src/target/StringsOps.go?s=1515:1597#L54">IndexStart</a>
+					<a class="permalink" href="#StringOps.IndexStart">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) IndexStart(webContent <a href="/pkg/builtin/#string">string</a>, tagStart <a href="/pkg/builtin/#string">string</a>, start <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#int">int</a></pre>
+				<p>
+IndexStart : To find the index from a string starting from the start argument
+Index will only start searching the index of the tagStart string from only the index at start argument
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.InsertList">func (*StringOps) <a href="/src/target/StringsOps.go?s=868:936#L32">InsertList</a>
+					<a class="permalink" href="#StringOps.InsertList">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) InsertList(list []<a href="/pkg/builtin/#string">string</a>, item <a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+InsertLit : insert a string into array of string and return it
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.InsideFile">func (*StringOps) <a href="/src/target/StringsOps.go?s=14596:14666#L461">InsideFile</a>
+					<a class="permalink" href="#StringOps.InsideFile">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) InsideFile(filename <a href="/pkg/builtin/#string">string</a>, str2 <a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+InsideFile : return &#34;1&#34; when a string str2 exist as a line inside a file specified in filename
+this file containings string in multiple lines split with New Line character, case is insensitive
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.IsContainChinese">func (*StringOps) <a href="/src/target/StringsOps.go?s=10508:10564#L334">IsContainChinese</a>
+					<a class="permalink" href="#StringOps.IsContainChinese">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) IsContainChinese(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+IsContainChinese : return &#34;1&#34; when the string has non english character and &#34;0&#34; otherwise
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.IsInFile">func (*StringOps) <a href="/src/target/StringsOps.go?s=13200:13266#L415">IsInFile</a>
+					<a class="permalink" href="#StringOps.IsInFile">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) IsInFile(filename <a href="/pkg/builtin/#string">string</a>, text <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+IsInFile : return true if a text string exists as a line in the content of a file in filename which
+containing multiples lines of information, case is insensitive
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.LastIndexStart">func (*StringOps) <a href="/src/target/StringsOps.go?s=1917:2003#L65">LastIndexStart</a>
+					<a class="permalink" href="#StringOps.LastIndexStart">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) LastIndexStart(webContent <a href="/pkg/builtin/#string">string</a>, tagStart <a href="/pkg/builtin/#string">string</a>, start <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#int">int</a></pre>
+				<p>
+LastIndexStart : return the last index of tagStart string from a webContent string
+but it will skip few first characters from the string specified by start argument
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.LoadFile">func (*StringOps) <a href="/src/target/StringsOps.go?s=14072:14127#L444">LoadFile</a>
+					<a class="permalink" href="#StringOps.LoadFile">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) LoadFile(filename <a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+LoadFile : return list of array read from a file content with path spcificied in filaname argument
+The content is split by New Line character and return it as a string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.Makan">func (*StringOps) <a href="/src/target/StringsOps.go?s=1255:1308#L48">Makan</a>
+					<a class="permalink" href="#StringOps.Makan">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) Makan(a <a href="/pkg/builtin/#string">string</a>, b <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+Makan : concatenate two strings in the argument and return it
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.Min">func (*StringOps) <a href="/src/target/StringsOps.go?s=1110:1148#L40">Min</a>
+					<a class="permalink" href="#StringOps.Min">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) Min(x, y <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#int">int</a></pre>
+				<p>
+Min : given x and y integer, returns the one with lesser value
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.OtherDate">func (*StringOps) <a href="/src/target/StringsOps.go?s=19144:19231#L610">OtherDate</a>
+					<a class="permalink" href="#StringOps.OtherDate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) OtherDate(dd <a href="/pkg/builtin/#string">string</a>, mm <a href="/pkg/builtin/#string">string</a>, yyyy <a href="/pkg/builtin/#string">string</a>, format <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+OtherDate : return a date given dd (day), mm (month), yyyy (year) all in string format
+and return the date formatted with format argument
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.OtherDateOffset">func (*StringOps) <a href="/src/target/StringsOps.go?s=19707:19812#L623">OtherDateOffset</a>
+					<a class="permalink" href="#StringOps.OtherDateOffset">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) OtherDateOffset(dd <a href="/pkg/builtin/#string">string</a>, mm <a href="/pkg/builtin/#string">string</a>, yyyy <a href="/pkg/builtin/#string">string</a>, format <a href="/pkg/builtin/#string">string</a>, day <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+OtherDateOffset : return a date given dd (day), mm (month), yyyy (year) all in string format
+and return the date added with day which is a string but parse and integer formatted with format argument
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.PadLeft">func (*StringOps) <a href="/src/target/StringsOps.go?s=20296:20371#L637">PadLeft</a>
+					<a class="permalink" href="#StringOps.PadLeft">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) PadLeft(value <a href="/pkg/builtin/#int">int</a>, charused <a href="/pkg/builtin/#string">string</a>, amount <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+PadLeft : pad a string specified by value to contains the minimum length of amount, if the length is lesser
+the charused character will be used to pad the left side
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.PathFileLength">func (*StringOps) <a href="/src/target/StringsOps.go?s=12419:12478#L396">PathFileLength</a>
+					<a class="permalink" href="#StringOps.PathFileLength">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) PathFileLength(filename <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+PathFileLength : return the size of a file in full or relative path in bytes and return in string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.PathGetFileName">func (*StringOps) <a href="/src/target/StringsOps.go?s=12184:12244#L390">PathGetFileName</a>
+					<a class="permalink" href="#StringOps.PathGetFileName">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) PathGetFileName(filename <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+PathGetFileName : return filename only of a full path or relative path
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.RandomInteger">func (*StringOps) <a href="/src/target/StringsOps.go?s=2500:2548#L84">RandomInteger</a>
+					<a class="permalink" href="#StringOps.RandomInteger">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) RandomInteger(n <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+RandomInteger : create a random integer with length specified by n return it as string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.RandomNext">func (*StringOps) <a href="/src/target/StringsOps.go?s=17927:17975#L570">RandomNext</a>
+					<a class="permalink" href="#StringOps.RandomNext">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) RandomNext(i <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+RandomNext : given an integer, return random number from 0 to i as a string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.RandomString">func (*StringOps) <a href="/src/target/StringsOps.go?s=2238:2285#L75">RandomString</a>
+					<a class="permalink" href="#StringOps.RandomString">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) RandomString(n <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+RandomString : create a random string with length specified by n and return it
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.ReadAllText">func (*StringOps) <a href="/src/target/StringsOps.go?s=13656:13714#L431">ReadAllText</a>
+					<a class="permalink" href="#StringOps.ReadAllText">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) ReadAllText(filename <a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+ReadAllText : return the content of a filename and read its content as a string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.RemoveChinese">func (*StringOps) <a href="/src/target/StringsOps.go?s=10785:10838#L344">RemoveChinese</a>
+					<a class="permalink" href="#StringOps.RemoveChinese">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) RemoveChinese(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+RemoveChinese : return a string after stripping the argument string from non english character
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.SOGetEnd">func (*StringOps) <a href="/src/target/StringsOps.go?s=4975:5074#L160">SOGetEnd</a>
+					<a class="permalink" href="#StringOps.SOGetEnd">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) SOGetEnd(text <a href="/pkg/builtin/#string">string</a>, search <a href="/pkg/builtin/#string">string</a>, endsearch <a href="/pkg/builtin/#string">string</a>, start <a href="/pkg/builtin/#int">int</a>, end <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#int">int</a></pre>
+				<p>
+SOGetEnd : given a text string, it searches the substring specified by search argument, with ending
+endsearch argument but this search is limited and started only by start index and end of index
+specified in argument
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.SingleTagMatch">func (*StringOps) <a href="/src/target/StringsOps.go?s=7422:7513#L243">SingleTagMatch</a>
+					<a class="permalink" href="#StringOps.SingleTagMatch">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) SingleTagMatch(content <a href="/pkg/builtin/#string">string</a>, search <a href="/pkg/builtin/#string">string</a>, endsearch <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+SingleTagMatch : given a content, it searches for a tag with attribute specified by search string
+and ending by endsearch string, example if content is &#34;&lt;a href=&#39;abc&#39;&gt;&#34; and search is &#34;href=&#39;&#34; and endsearch is &#34;&#39;&#34;
+it returns &#34;abc&#34;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.StartsWith">func (*StringOps) <a href="/src/target/StringsOps.go?s=16972:17030#L540">StartsWith</a>
+					<a class="permalink" href="#StringOps.StartsWith">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) StartsWith(a <a href="/pkg/builtin/#string">string</a>, b <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+StartsWith : determine string a has a string started by b string, return &#34;1&#34; when does
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.StripHTML">func (*StringOps) <a href="/src/target/StringsOps.go?s=7756:7809#L255">StripHTML</a>
+					<a class="permalink" href="#StringOps.StripHTML">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) StripHTML(content <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="StringOps.Substring">func (*StringOps) <a href="/src/target/StringsOps.go?s=2963:3038#L102">Substring</a>
+					<a class="permalink" href="#StringOps.Substring">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (*<a href="#StringOps">StringOps</a>) Substring(webContent <a href="/pkg/builtin/#string">string</a>, start <a href="/pkg/builtin/#int">int</a>, count <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+Substring : get a subset of string from webContent, started from character in index specified by start
+and return the amount of characters specified by count
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.SubstringEnd">func (*StringOps) <a href="/src/target/StringsOps.go?s=3434:3504#L118">SubstringEnd</a>
+					<a class="permalink" href="#StringOps.SubstringEnd">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) SubstringEnd(webContent <a href="/pkg/builtin/#string">string</a>, start <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+Substring : get a subset of string from webContent, started from character in index specified by start
+and return the amount of characters from that point until the end of the webContent
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.SubstringIndexOf">func (*StringOps) <a href="/src/target/StringsOps.go?s=20573:20643#L643">SubstringIndexOf</a>
+					<a class="permalink" href="#StringOps.SubstringIndexOf">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) SubstringIndexOf(str <a href="/pkg/builtin/#string">string</a>, start <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+SubStringIndexOf : Find a substring start from a string str and return the character from the index until
+end of the string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.SubstringIndexOfLast">func (*StringOps) <a href="/src/target/StringsOps.go?s=20940:21014#L656">SubstringIndexOfLast</a>
+					<a class="permalink" href="#StringOps.SubstringIndexOfLast">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) SubstringIndexOfLast(str <a href="/pkg/builtin/#string">string</a>, start <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+SubstringIndexOfLast : Find a substring start from a string str and return the character from index 0
+until the index of substring found
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.SubstringLastIndexOf">func (*StringOps) <a href="/src/target/StringsOps.go?s=21285:21359#L666">SubstringLastIndexOf</a>
+					<a class="permalink" href="#StringOps.SubstringLastIndexOf">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) SubstringLastIndexOf(str <a href="/pkg/builtin/#string">string</a>, start <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+SubstringLastIndexOf : Find the last occurence of substring start from a string str and
+return the character from the index until end of the string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.SubstringLastIndexOfLast">func (*StringOps) <a href="/src/target/StringsOps.go?s=21680:21758#L679">SubstringLastIndexOfLast</a>
+					<a class="permalink" href="#StringOps.SubstringLastIndexOfLast">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) SubstringLastIndexOfLast(str <a href="/pkg/builtin/#string">string</a>, start <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+SubstringIndexOfLast : Find the last occurence of substring start from a string str and
+return the character from index 0 until the index of substring found
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.TagMatch">func (*StringOps) <a href="/src/target/StringsOps.go?s=4212:4301#L135">TagMatch</a>
+					<a class="permalink" href="#StringOps.TagMatch">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) TagMatch(webContent <a href="/pkg/builtin/#string">string</a>, tagStart <a href="/pkg/builtin/#string">string</a>, tagEnd <a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+TagMatch : return array of string extracted from webContent that each string is surrounded by tagStart and tagEnd
+Example, startTag=&#39;&lt;div&gt;&#39;, endTag=&#39;&lt;/div&gt;&#39;
+Data :
+&lt;div&gt;<a href="http://data1">http://data1</a> Data 1&lt;/div&gt;&lt;div id=&#39;unique&#39;&gt;more&lt;/div&gt;
+&lt;div&gt;<a href="http://data2">http://data2</a> Data 2&lt;/div&gt;&lt;div id=&#39;unique&#39;&gt;more&lt;/div&gt;
+...
+Return : &#39;<a href="http://data1">http://data1</a> Data 1&#39;, &#39;<a href="http://data2">http://data2</a> Data 2&#39;, ... in IList ]]&gt;
+&lt;/summary&gt;
+&lt;param name=&#34;webContent&#34;&gt;The data that is being parsed&lt;/param&gt;
+&lt;param name=&#34;tagStart&#34;&gt;The start of the data&lt;/param&gt;
+&lt;param name=&#34;tagEnd&#34;&gt;The end of the data&lt;/param&gt;
+&lt;returns&gt;Return all the tag matches&lt;/returns&gt;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.TagMatchFromBehind">func (*StringOps) <a href="/src/target/StringsOps.go?s=6039:6138#L185">TagMatchFromBehind</a>
+					<a class="permalink" href="#StringOps.TagMatchFromBehind">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) TagMatchFromBehind(webContent <a href="/pkg/builtin/#string">string</a>, tagStart <a href="/pkg/builtin/#string">string</a>, tagEnd <a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+TagMatchFromBehind : return array of string which matches surrounded by tagEnd and tagStart
+it is similar to TagMatch but the different is this function will start the search from the end of surrounded
+from the start of the webContent string
+Example, tagStart=&#34;&lt;div&gt;&#34;, tagEnd=&#34;&lt;/div&gt;&lt;div id=&#39;unique&#39;&gt;more&lt;/div&gt;&#34;
+Data :
+&lt;div&gt;<a href="http://data1">http://data1</a> Data 1&lt;/div&gt;&lt;div id=&#39;unique&#39;&gt;more&lt;/div&gt;&lt;div&gt;<a href="http://data2">http://data2</a> Data 2&lt;/div&gt;&lt;div id=&#39;unique&#39;&gt;more&lt;/div&gt;
+...
+Return : &#34;<a href="http://data1">http://data1</a> Data 1&#34;, &#34;<a href="http://data2">http://data2</a> Data 2&#34;
+Even the searching is from behind the result return is in start to end order ]]&gt;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.TagMatchSingle">func (*StringOps) <a href="/src/target/StringsOps.go?s=7848:7969#L259">TagMatchSingle</a>
+					<a class="permalink" href="#StringOps.TagMatchSingle">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) TagMatchSingle(content <a href="/pkg/builtin/#string">string</a>, containing <a href="/pkg/builtin/#string">string</a>, attributeStart <a href="/pkg/builtin/#string">string</a>, attributeEnd <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="StringOps.TagMatchSkip">func (*StringOps) <a href="/src/target/StringsOps.go?s=9168:9279#L291">TagMatchSkip</a>
+					<a class="permalink" href="#StringOps.TagMatchSkip">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) TagMatchSkip(webContent <a href="/pkg/builtin/#string">string</a>, tagStart <a href="/pkg/builtin/#string">string</a>, tagEnd <a href="/pkg/builtin/#string">string</a>, skipStart <a href="/pkg/builtin/#string">string</a>) []<a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+TagMatchSkip : given a webContent string extract array of string from it surrounded by tagStart and tagEnd
+if however the process of extraction from surrounding encounter skipStart string which is mostly subset of
+tagStart it will not treating it as a new start
+Example, startTag=&#39;&lt;div&gt;&#39;, endTag=&#39;&lt;/div&gt;&#39;, skipStart=&#39;&lt;div&gt;&#39;
+Data :
+&lt;div&gt;<a href="http://data1">http://data1</a> &lt;div&gt;Data 1&lt;/div&gt;asdasd&lt;/div&gt;
+&lt;div&gt;<a href="http://data2">http://data2</a> &lt;div&gt;Data 2&lt;/div&gt;asdasd&lt;/div&gt;
+...
+Return : &#39;<a href="http://data1">http://data1</a> &lt;div&gt;Data 1&lt;/div&gt;&#39;, &#39;<a href="http://data2">http://data2</a> &lt;div&gt;Data 2&lt;/div&gt;&#39;, ... in string[] ]]&gt;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.TrimUp">func (*StringOps) <a href="/src/target/StringsOps.go?s=18192:18238#L581">TrimUp</a>
+					<a class="permalink" href="#StringOps.TrimUp">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) TrimUp(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+TrimUp : Trim a string from whitespace and return it as upper case
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.UrlDecode">func (*StringOps) <a href="/src/target/StringsOps.go?s=8471:8524#L274">UrlDecode</a>
+					<a class="permalink" href="#StringOps.UrlDecode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) UrlDecode(content <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+UrlDecode : decode a url string such as those containing %20 and return the real url such as containing space
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StringOps.UrlEncode">func (*StringOps) <a href="/src/target/StringsOps.go?s=8267:8320#L269">UrlEncode</a>
+					<a class="permalink" href="#StringOps.UrlEncode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (so *<a href="#StringOps">StringOps</a>) UrlEncode(content <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				<p>
+UrlEncode : encode a string specicied in content argument and encode character like space to its
+url representation such as %20
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SyntaxCommand">type <a href="/src/target/ScrapperMin.go?s=745:858#L27">SyntaxCommand</a>
+				<a class="permalink" href="#SyntaxCommand">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+SyntaxCommand : Represent a command and its arguments
+</p>
+
+			<pre>type SyntaxCommand struct {
+<span id="SyntaxCommand.Command"></span>    Command    <a href="/pkg/builtin/#string">string</a>
+<span id="SyntaxCommand.Parameters"></span>    Parameters [][]*<a href="#SyntaxCommand">SyntaxCommand</a>
+<span id="SyntaxCommand.IsClosed"></span>    IsClosed   <a href="/pkg/builtin/#bool">bool</a>
+<span id="SyntaxCommand.IsString"></span>    IsString   <a href="/pkg/builtin/#bool">bool</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
